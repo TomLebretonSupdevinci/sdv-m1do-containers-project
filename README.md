@@ -1,6 +1,6 @@
 # Sup de Vinci - Containers module project
 
-# Stack DEVELOPMENT
+## Stack DEVELOPMENT
 
 Clone the repository on its machine : `git clone https://github.com/TomLebretonSupdevinci/sdv-m1do-containers-project.git`
 
@@ -11,7 +11,7 @@ You must be in the repertoire of your git repository is located the docker-compo
 Connect to webpage : http://localhost:3000
 Connect to apipage : http://localhost:8000
 
-# Stack PRODUCTION
+## Stack PRODUCTION
 
 To put into production you can use a docker-compose file like this :
 
@@ -41,7 +41,7 @@ Connect to apipage : http://localhost:80
 
 The website request the URL http://localhost/jokes/random in http and display a random joke on the webpage.
 
-# CI/CD Pipeline
+## CI/CD Pipeline
 
 When you make a modification and push on the repo, github execute these tasks :
 
@@ -52,6 +52,4 @@ When you make a modification and push on the repo, github execute these tasks :
 - Push API Image into the DockerHub Repo
 - Push WebPage Image into the DockerHub Repo
 
-These Images can now be used to deploy the Production Stack
-
-
+These Images can now be used to deploy the Production Stack.
