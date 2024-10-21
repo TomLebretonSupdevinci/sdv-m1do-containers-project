@@ -15,8 +15,7 @@ Connect to apipage : http://localhost:8000
 
 To put into production you can use a docker-compose file like this :
 
-``
-yaml
+```yaml
 
 services:
   api:
@@ -35,7 +34,7 @@ services:
     environment:
       - API_URL=http://api
 
-``
+```
 
 Connect to webpage : http://localhost:3000
 Connect to apipage : http://localhost:80
