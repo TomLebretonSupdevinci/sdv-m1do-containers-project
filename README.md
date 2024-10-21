@@ -6,7 +6,7 @@
 
 ### API
 
-To run the stack docker containing both containers (api and front) run the command: 'docker compose up'.
+To run the stack docker containing both containers (api and front) run the command: `docker compose up`.
 You must be in the repertoire of your git repository is located the docker-compose.yaml
 
 #### Basics
