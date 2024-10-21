@@ -1,6 +1,5 @@
 name: CI/CD Pipeline
 
-# Déclencheurs du workflow
 on:
   push:
     branches:
@@ -24,18 +23,18 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build API Dev Image
+      - name: Build API Image
         run: docker build --target production -f sdv-api/dockerfile -t rustapilebretontomsdv:latest ./sdv-api
 
-      - name: Build Web Dev Image
+      - name: Build Web Image
         run: docker build -f sdv-web/dockerfile -t frontendlebretontomsdv:latest ./sdv-web
 
-      - name: Tag and Push API Dev Image
+      - name: Tag and Push API Image
         run: |
           docker tag rustapilebretontomsdv:latest ${{ secrets.DOCKER_USERNAME }}/rustapilebretontomsdv:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/rustapilebretontomsdv:latest
 
-      - name: Tag and Push Web Dev Image
+      - name: Tag and Push Web Image
         run: |
           docker tag frontendlebretontomsdv:latest ${{ secrets.DOCKER_USERNAME }}/frontendlebretontomsdv:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/frontendlebretontomsdv:latest
